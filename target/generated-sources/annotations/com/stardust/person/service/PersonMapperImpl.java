@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-11-20T15:27:50+0330",
-    comments = "version: 1.3.0.Final, compiler: javac, environment: Java 1.8.0_152 (Oracle Corporation)"
+    date = "2020-11-22T16:26:01+0330",
+    comments = "version: 1.3.0.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
 )
 @Component
 public class PersonMapperImpl implements PersonMapper {
@@ -66,5 +66,19 @@ public class PersonMapperImpl implements PersonMapper {
         personEntity.setStateId( entity.getStateId() );
 
         return personEntity;
+    }
+
+    @Override
+    public void updateEntity(PersonDetailModel arg0, PersonEntity arg1) {
+        if ( arg0 == null ) {
+            return;
+        }
+
+        arg1.setStardustEntityId( arg0.getStardustEntityId() );
+        arg1.setVersion( arg0.getVersion() );
+        arg1.setCreatedDate( arg0.getCreatedDate() );
+        arg1.setLastModifiedDate( arg0.getLastModifiedDate() );
+        arg1.setSerial( arg0.getSerial() );
+        arg1.setStateId( arg0.getStateId() );
     }
 }

@@ -7,6 +7,7 @@ import com.stardust.person.service.PersonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Developer peyman mahdikhani
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * <p>
  * user PersonController - 11/20/2020
  */
-@Controller
+@RestController
 @RequestMapping("/person")
 @RequiredArgsConstructor
 public class PersonController extends StardustController<PersonListModel, PersonDetailModel, PersonEntity, Long> {
