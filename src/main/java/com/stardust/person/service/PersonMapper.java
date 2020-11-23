@@ -5,6 +5,7 @@ import com.stardust.person.controller.PersonDetailModel;
 import com.stardust.person.controller.PersonListModel;
 import com.stardust.person.repository.PersonEntity;
 import org.mapstruct.Mapper;
+import org.mapstruct.control.DeepClone;
 
 /**
  * Developer peyman mahdikhani
@@ -13,6 +14,6 @@ import org.mapstruct.Mapper;
  * <p>
  * user PersonMapper - 11/20/2020
  */
-@Mapper
+@Mapper(mappingControl = DeepClone.class)
 public interface PersonMapper extends StardustMapper<PersonListModel, PersonDetailModel, PersonEntity, Long> {
 }

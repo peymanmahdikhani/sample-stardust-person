@@ -40,8 +40,7 @@ class PersonApplicationTests extends StardustTester<PersonListModel, PersonDetai
                 .build();
 
         Long stardustEntity = personService.createStardustEntity(personDetailModel);
-        personDetailModel.setStardustEntityId(stardustEntity);
-        return personDetailModel;
+        return personService.getStardustEntity(stardustEntity);
     }
 
     @Override
