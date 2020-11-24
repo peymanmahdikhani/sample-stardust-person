@@ -8,7 +8,6 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.stardust</groupId>
     <artifactId>person</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>person</name>

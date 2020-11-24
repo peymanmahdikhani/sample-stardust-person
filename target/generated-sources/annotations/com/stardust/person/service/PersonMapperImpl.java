@@ -1,15 +1,18 @@
 package com.stardust.person.service;
 
 import com.stardust.person.controller.PersonDetailModel;
+import com.stardust.person.controller.PersonDetailModel.PersonDetailModelBuilder;
 import com.stardust.person.controller.PersonListModel;
+import com.stardust.person.controller.PersonListModel.PersonListModelBuilder;
 import com.stardust.person.repository.PersonEntity;
+import com.stardust.person.repository.PersonEntity.PersonEntityBuilder;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-11-22T17:34:41+0330",
-    comments = "version: 1.3.0.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
+    date = "2020-11-24T17:17:45+0330",
+    comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
 )
 @Component
 public class PersonMapperImpl implements PersonMapper {
@@ -20,16 +23,19 @@ public class PersonMapperImpl implements PersonMapper {
             return null;
         }
 
-        PersonListModel personListModel = new PersonListModel();
+        PersonListModelBuilder<?, ?> personListModel = PersonListModel.builder();
 
-        personListModel.setStardustEntityId( entity.getStardustEntityId() );
-        personListModel.setStateId( entity.getStateId() );
-        personListModel.setVersion( entity.getVersion() );
-        personListModel.setCreatedDate( entity.getCreatedDate() );
-        personListModel.setLastModifiedDate( entity.getLastModifiedDate() );
-        personListModel.setSerial( entity.getSerial() );
+        personListModel.stardustEntityId( entity.getStardustEntityId() );
+        personListModel.stateId( entity.getStateId() );
+        personListModel.version( entity.getVersion() );
+        personListModel.createdDate( entity.getCreatedDate() );
+        personListModel.lastModifiedDate( entity.getLastModifiedDate() );
+        personListModel.serial( entity.getSerial() );
+        personListModel.firstName( entity.getFirstName() );
+        personListModel.lastName( entity.getLastName() );
+        personListModel.birthCertificateNumber( entity.getBirthCertificateNumber() );
 
-        return personListModel;
+        return personListModel.build();
     }
 
     @Override
@@ -38,16 +44,19 @@ public class PersonMapperImpl implements PersonMapper {
             return null;
         }
 
-        PersonDetailModel personDetailModel = new PersonDetailModel();
+        PersonDetailModelBuilder<?, ?> personDetailModel = PersonDetailModel.builder();
 
-        personDetailModel.setStardustEntityId( entity.getStardustEntityId() );
-        personDetailModel.setStateId( entity.getStateId() );
-        personDetailModel.setVersion( entity.getVersion() );
-        personDetailModel.setCreatedDate( entity.getCreatedDate() );
-        personDetailModel.setLastModifiedDate( entity.getLastModifiedDate() );
-        personDetailModel.setSerial( entity.getSerial() );
+        personDetailModel.stardustEntityId( entity.getStardustEntityId() );
+        personDetailModel.stateId( entity.getStateId() );
+        personDetailModel.version( entity.getVersion() );
+        personDetailModel.createdDate( entity.getCreatedDate() );
+        personDetailModel.lastModifiedDate( entity.getLastModifiedDate() );
+        personDetailModel.serial( entity.getSerial() );
+        personDetailModel.firstName( entity.getFirstName() );
+        personDetailModel.lastName( entity.getLastName() );
+        personDetailModel.birthCertificateNumber( entity.getBirthCertificateNumber() );
 
-        return personDetailModel;
+        return personDetailModel.build();
     }
 
     @Override
@@ -56,16 +65,19 @@ public class PersonMapperImpl implements PersonMapper {
             return null;
         }
 
-        PersonEntity personEntity = new PersonEntity();
+        PersonEntityBuilder<?, ?> personEntity = PersonEntity.builder();
 
-        personEntity.setStardustEntityId( entity.getStardustEntityId() );
-        personEntity.setVersion( entity.getVersion() );
-        personEntity.setCreatedDate( entity.getCreatedDate() );
-        personEntity.setLastModifiedDate( entity.getLastModifiedDate() );
-        personEntity.setSerial( entity.getSerial() );
-        personEntity.setStateId( entity.getStateId() );
+        personEntity.stardustEntityId( entity.getStardustEntityId() );
+        personEntity.version( entity.getVersion() );
+        personEntity.createdDate( entity.getCreatedDate() );
+        personEntity.lastModifiedDate( entity.getLastModifiedDate() );
+        personEntity.serial( entity.getSerial() );
+        personEntity.stateId( entity.getStateId() );
+        personEntity.firstName( entity.getFirstName() );
+        personEntity.lastName( entity.getLastName() );
+        personEntity.birthCertificateNumber( entity.getBirthCertificateNumber() );
 
-        return personEntity;
+        return personEntity.build();
     }
 
     @Override
@@ -78,7 +90,10 @@ public class PersonMapperImpl implements PersonMapper {
         arg1.setVersion( arg0.getVersion() );
         arg1.setCreatedDate( arg0.getCreatedDate() );
         arg1.setLastModifiedDate( arg0.getLastModifiedDate() );
-        arg1.setSerial( arg0.getSerial() );
         arg1.setStateId( arg0.getStateId() );
+        arg1.setSerial( arg0.getSerial() );
+        arg1.setFirstName( arg0.getFirstName() );
+        arg1.setLastName( arg0.getLastName() );
+        arg1.setBirthCertificateNumber( arg0.getBirthCertificateNumber() );
     }
 }
