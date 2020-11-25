@@ -5,8 +5,6 @@ import com.stardust.core.service.StardustService;
 import com.stardust.person.repository.PersonEntity;
 import com.stardust.person.service.PersonService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
  * user PersonController - 11/20/2020
  */
 @RestController
-@RequestMapping("/person")
 @RequiredArgsConstructor
 public class PersonController extends StardustController<PersonListModel, PersonDetailModel, PersonEntity, Long> {
     private final PersonService personService;
@@ -25,10 +22,5 @@ public class PersonController extends StardustController<PersonListModel, Person
     @Override
     protected StardustService<PersonListModel, PersonDetailModel, PersonEntity, Long> getService() {
         return personService;
-    }
-
-    @Override
-    protected String getDustName() {
-        return "Person";
     }
 }

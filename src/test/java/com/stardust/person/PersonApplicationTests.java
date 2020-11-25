@@ -42,9 +42,4 @@ class PersonApplicationTests extends StardustTester<PersonListModel, PersonDetai
         Long stardustEntity = personService.createStardustEntity(personDetailModel);
         return personService.getStardustEntity(stardustEntity);
     }
-
-    @Override
-    protected String getDustName() {
-        return "person";
-    }
 }
