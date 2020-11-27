@@ -21,7 +21,7 @@ import javax.persistence.Entity;
 @Entity
 @SuperBuilder
 @NoArgsConstructor
-public class PersonEntity extends StardustEntity<Long> {
+public class PersonEntity extends StardustEntity {
     @Column(nullable = false)
     private String firstName;
     @Column(nullable = false)

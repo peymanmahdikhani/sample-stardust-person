@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-11-25T14:08:44+0330",
+    date = "2020-11-27T12:33:24+0330",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
 )
 @Component
@@ -25,7 +25,7 @@ public class PersonMapperImpl implements PersonMapper {
 
         PersonListModelBuilder<?, ?> personListModel = PersonListModel.builder();
 
-        personListModel.stardustEntityId( entity.getStardustEntityId() );
+        personListModel.id( entity.getId() );
         personListModel.stateId( entity.getStateId() );
         personListModel.version( entity.getVersion() );
         personListModel.createdDate( entity.getCreatedDate() );
@@ -46,7 +46,7 @@ public class PersonMapperImpl implements PersonMapper {
 
         PersonDetailModelBuilder<?, ?> personDetailModel = PersonDetailModel.builder();
 
-        personDetailModel.stardustEntityId( entity.getStardustEntityId() );
+        personDetailModel.id( entity.getId() );
         personDetailModel.stateId( entity.getStateId() );
         personDetailModel.version( entity.getVersion() );
         personDetailModel.createdDate( entity.getCreatedDate() );
@@ -67,7 +67,7 @@ public class PersonMapperImpl implements PersonMapper {
 
         PersonEntityBuilder<?, ?> personEntity = PersonEntity.builder();
 
-        personEntity.stardustEntityId( entity.getStardustEntityId() );
+        personEntity.id( entity.getId() );
         personEntity.version( entity.getVersion() );
         personEntity.createdDate( entity.getCreatedDate() );
         personEntity.lastModifiedDate( entity.getLastModifiedDate() );
@@ -86,7 +86,7 @@ public class PersonMapperImpl implements PersonMapper {
             return;
         }
 
-        arg1.setStardustEntityId( arg0.getStardustEntityId() );
+        arg1.setId( arg0.getId() );
         arg1.setVersion( arg0.getVersion() );
         arg1.setCreatedDate( arg0.getCreatedDate() );
         arg1.setLastModifiedDate( arg0.getLastModifiedDate() );

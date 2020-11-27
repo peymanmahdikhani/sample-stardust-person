@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @SuperBuilder
 @NoArgsConstructor
-public class PersonListModel extends StardustListMode<Long> {
+public class PersonListModel extends StardustListMode {
     @NotNull
     private String firstName;
     @NotNull

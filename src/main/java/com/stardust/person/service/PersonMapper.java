@@ -15,5 +15,5 @@ import org.mapstruct.Mapper;
  * user PersonMapper - 11/20/2020
  */
 @Mapper(config = StardustMapperConfig.class)
-public interface PersonMapper extends StardustMapper<PersonListModel, PersonDetailModel, PersonEntity, Long> {
+public interface PersonMapper extends StardustMapper<PersonListModel, PersonDetailModel, PersonEntity> {
 }

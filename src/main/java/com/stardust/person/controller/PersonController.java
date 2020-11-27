@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequiredArgsConstructor
-public class PersonController extends StardustController<PersonListModel, PersonDetailModel, PersonEntity, Long> {
+public class PersonController extends StardustController<PersonListModel, PersonDetailModel, PersonEntity> {
     private final PersonService personService;
 
     @Override
-    protected StardustService<PersonListModel, PersonDetailModel, PersonEntity, Long> getService() {
+    protected StardustService<PersonListModel, PersonDetailModel, PersonEntity> getService() {
         return personService;
     }
 }

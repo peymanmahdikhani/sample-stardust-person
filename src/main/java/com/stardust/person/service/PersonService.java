@@ -12,5 +12,5 @@ import com.stardust.person.repository.PersonEntity;
  * <p>
  * user PersonService - 11/20/2020
  */
-public interface PersonService extends StardustService<PersonListModel, PersonDetailModel, PersonEntity, Long> {
+public interface PersonService extends StardustService<PersonListModel, PersonDetailModel, PersonEntity> {
 }

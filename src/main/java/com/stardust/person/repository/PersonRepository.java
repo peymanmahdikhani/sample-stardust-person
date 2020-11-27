@@ -9,5 +9,5 @@ import com.stardust.core.repository.StardustRepository;
  * <p>
  * user PersonFactory - 11/20/2020
  */
-public interface PersonRepository extends StardustRepository<PersonEntity, Long> {
+public interface PersonRepository extends StardustRepository<PersonEntity> {
 }
