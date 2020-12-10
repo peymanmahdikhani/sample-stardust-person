@@ -6,6 +6,7 @@ import com.stardust.person.controller.PersonDetailModel;
 import com.stardust.person.controller.PersonListModel;
 import com.stardust.person.repository.PersonEntity;
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
 /**
  * Developer peyman mahdikhani
@@ -16,4 +17,5 @@ import org.mapstruct.Mapper;
  */
 @Mapper(config = StardustMapperConfig.class)
 public interface PersonMapper extends StardustMapper<PersonListModel, PersonDetailModel, PersonEntity> {
+    PersonMapper INSTANCE = Mappers.getMapper( PersonMapper.class );
 }
