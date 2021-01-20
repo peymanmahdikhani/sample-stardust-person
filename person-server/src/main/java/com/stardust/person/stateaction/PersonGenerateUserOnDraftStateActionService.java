@@ -1,8 +1,10 @@
-package com.stardust.person.service;
+package com.stardust.person.stateaction;
 
+import com.stardust.core.jms.StardustJmsTemplate;
 import com.stardust.core.statemachine.core.action.StardustActionType;
 import com.stardust.core.statemachine.core.actionservice.StardustActionServiceBase;
 import com.stardust.core.statemachine.core.state.StardustStateDraft;
+import com.stardust.person.service.PersonService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -19,8 +21,9 @@ import java.util.UUID;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class PersonDraftStateActionService extends StardustActionServiceBase {
+public class PersonGenerateUserOnDraftStateActionService extends StardustActionServiceBase {
     private final PersonService personService;
+    private final StardustJmsTemplate stardustJmsTemplate;
 
     @Override
     public String getState() {
@@ -35,5 +38,11 @@ public class PersonDraftStateActionService extends StardustActionServiceBase {
     @Override
     public void execute(UUID stardustEntityId, StardustActionType actionType) {
         log.debug("person going to verify by action type: " + actionType.name());
+
+        stardustJmsTemplate.publishServiceEvent(
+                "user",
+                this,
+                stardustEntityId
+        );
     }
 }
